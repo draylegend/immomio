@@ -9,11 +9,8 @@ import { AppModule } from './app/app.module';
 
 (async () => {
   const app = await NestFactory.create(AppModule);
-  const globalPrefix = 'api';
   const port = process.env.PORT || 3333;
 
-  app.setGlobalPrefix(globalPrefix);
-
   await app.listen(port);
-  Logger.log(`🚀 http://localhost:${port}/${globalPrefix}`);
+  Logger.log(`🚀 http://localhost:3333/graphql`);
 })();
