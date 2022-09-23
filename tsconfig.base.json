@@ -19,7 +19,8 @@
       "@immomio/appointment/domain": ["libs/appointment/domain/src/index.ts"],
       "@immomio/appointment/feature": ["libs/appointment/feature/src/index.ts"],
       "@immomio/appointment/ui": ["libs/appointment/ui/src/index.ts"],
-      "@immomio/core/domain": ["libs/core/domain/src/index.ts"]
+      "@immomio/core/domain": ["libs/core/domain/src/index.ts"],
+      "@immomio/shared/domain": ["libs/shared/domain/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
