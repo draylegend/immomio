@@ -49,6 +49,10 @@
       "style": "scss",
       "tags": "scope:,type:",
       "unitTestRunner": "jest"
+    },
+    "@nrwl/nest:application": {
+      "standaloneConfig": true,
+      "tags": "scope:,type:"
     }
   },
   "defaultProject": "angular-client"
