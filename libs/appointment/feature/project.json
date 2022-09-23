@@ -2,7 +2,7 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/appointment/feature/src",
-  "prefix": "immomio",
+  "prefix": "im",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
