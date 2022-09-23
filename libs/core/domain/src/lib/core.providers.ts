@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { importProvidersFrom, Provider } from '@angular/core';
 import { provideRouter } from '@angular/router';
+import { Env } from '@immomio/shared/domain';
 import { EffectsModule } from '@ngrx/effects';
 import { routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
@@ -8,7 +9,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import provideApollo from './apollo.providers';
 import routes from './routes';
 
-export default (env: { api: string; production: boolean }) =>
+export default (env: Env) =>
   [
     importProvidersFrom(
       HttpClientModule,

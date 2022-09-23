@@ -1,9 +1,10 @@
 import { FactoryProvider } from '@angular/core';
 import { ApolloClientOptions, InMemoryCache } from '@apollo/client/core';
+import { Env } from '@immomio/shared/domain';
 import { APOLLO_OPTIONS } from 'apollo-angular';
 import { HttpLink } from 'apollo-angular/http';
 
-export default (env: { api: string; production: boolean }) =>
+export default (env: Env) =>
   ({
     provide: APOLLO_OPTIONS,
     useFactory: (httpLink: HttpLink) =>
