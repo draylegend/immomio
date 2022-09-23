@@ -5,9 +5,10 @@ import { EffectsModule } from '@ngrx/effects';
 import { routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import provideApollo from './apollo.providers';
 import routes from './routes';
 
-export default (env: { production: boolean }) =>
+export default (env: { api: string; production: boolean }) =>
   [
     importProvidersFrom(
       HttpClientModule,
@@ -33,4 +34,5 @@ export default (env: { production: boolean }) =>
       }),
     ),
     provideRouter(routes),
+    provideApollo(env),
   ] as Provider[];

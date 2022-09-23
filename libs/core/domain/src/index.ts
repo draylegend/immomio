@@ -1,3 +1,3 @@
-import providers from './lib/core.providers';
+import provideCore from './lib/core.providers';
 
-export { providers };
+export { provideCore };

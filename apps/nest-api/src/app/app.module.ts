@@ -11,7 +11,7 @@ import { environment } from '../environments/environment';
       debug: !environment.production,
       driver: ApolloDriver,
       playground: !environment.production,
-      autoSchemaFile: './schema.gql',
+      autoSchemaFile: './schema.graphql',
     }),
   ],
 })
