@@ -30,12 +30,23 @@
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
+    "@nrwl/angular:component": {
+      "style": "scss",
+      "changeDetection": "OnPush",
+      "inlineStyle": true,
+      "standalone": true
+    },
     "@nrwl/angular:library": {
       "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
+      "unitTestRunner": "jest",
+      "changeDetection": "OnPush",
+      "inlineStyle": true,
+      "skipModule": true,
+      "skipSelector": true,
+      "standalone": true,
+      "standaloneConfig": true,
+      "style": "scss",
+      "tags": "scope:,type:"
     }
   },
   "defaultProject": "angular-client"
