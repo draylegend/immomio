@@ -5,6 +5,7 @@
     "angular-client": "apps/angular-client",
     "angular-client-e2e": "apps/angular-client-e2e",
     "appointment-domain": "libs/appointment/domain",
+    "appointment-feature": "libs/appointment/feature",
     "core-domain": "libs/core/domain"
   }
 }
