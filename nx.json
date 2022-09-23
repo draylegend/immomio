@@ -53,6 +53,11 @@
     "@nrwl/nest:application": {
       "standaloneConfig": true,
       "tags": "scope:,type:"
+    },
+    "@nrwl/nest:library": {
+      "strict": true,
+      "tags": "scope:,type:",
+      "target": "esnext"
     }
   },
   "defaultProject": "angular-client"

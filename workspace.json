@@ -4,6 +4,7 @@
   "projects": {
     "angular-client": "apps/angular-client",
     "angular-client-e2e": "apps/angular-client-e2e",
+    "appointment-api": "libs/appointment/api",
     "appointment-domain": "libs/appointment/domain",
     "appointment-feature": "libs/appointment/feature",
     "appointment-ui": "libs/appointment/ui",
