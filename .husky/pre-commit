@@ -3,3 +3,5 @@
 
 yarn run format
 git add -A
+yarn run affected:lint
+yarn run affected:test
