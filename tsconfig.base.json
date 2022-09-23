@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@immomio/appointment/domain": ["libs/appointment/domain/src/index.ts"],
       "@immomio/core/domain": ["libs/core/domain/src/index.ts"]
     }
   },

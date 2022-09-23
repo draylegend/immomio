@@ -1,14 +1,14 @@
 {
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/core/domain/src",
+  "sourceRoot": "libs/appointment/domain/src",
   "prefix": "immomio",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/core/domain"],
+      "outputs": ["coverage/libs/appointment/domain"],
       "options": {
-        "jestConfig": "libs/core/domain/jest.config.ts",
+        "jestConfig": "libs/appointment/domain/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -16,11 +16,11 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "libs/core/domain/**/*.ts",
-          "libs/core/domain/**/*.html"
+          "libs/appointment/domain/**/*.ts",
+          "libs/appointment/domain/**/*.html"
         ]
       }
     }
   },
-  "tags": ["scope:core", "type:domain"]
+  "tags": ["scope:appointment", "type:domain"]
 }
