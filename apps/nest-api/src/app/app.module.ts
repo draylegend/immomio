@@ -1,11 +1,12 @@
+import { AppointmentApiModule } from '@immomio/appointment/api';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { environment } from '../environments/environment';
-import { TestResolver } from './test.resolver';
 
 @Module({
   imports: [
+    AppointmentApiModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({
       debug: !environment.production,
       driver: ApolloDriver,
@@ -13,6 +14,5 @@ import { TestResolver } from './test.resolver';
       autoSchemaFile: './schema.gql',
     }),
   ],
-  providers: [TestResolver],
 })
 export class AppModule {}

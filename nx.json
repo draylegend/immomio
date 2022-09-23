@@ -58,6 +58,14 @@
       "strict": true,
       "tags": "scope:,type:",
       "target": "esnext"
+    },
+    "@nrwl/nest:resolver": {
+      "directory": "lib",
+      "flat": true
+    },
+    "@nrwl/nest:service": {
+      "directory": "lib",
+      "flat": true
     }
   },
   "defaultProject": "angular-client"

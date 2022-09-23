@@ -2,6 +2,54 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type ContactObject {
+  firstName: String!
+  name: String!
+  email: String!
+  mobile: String!
+  phone: String!
+  fullName: String!
+}
+
+type AddressObject {
+  street: String!
+  houseNumber: String!
+  city: String!
+  country: String!
+  zipCode: String!
+}
+
+type ProfileObject {
+  firstname: String!
+  name: String!
+  phone: String!
+  gender: String!
+  title: String!
+}
+
+type UserObject {
+  profile: ProfileObject!
+  usertype: String!
+}
+
+type PropertyObject {
+  id: String!
+  name: String!
+  inviteeCount: Int!
+  address: AddressObject!
+  user: UserObject!
+}
+
+type AppointmentObject {
+  id: String!
+  date: String!
+  maxInviteeCount: Int!
+  attendeeCount: Int!
+  showContactInformation: Boolean!
+  contact: ContactObject!
+  property: PropertyObject!
+}
+
 type Query {
-  hello: String!
+  appointments: [AppointmentObject!]!
 }
