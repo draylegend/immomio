@@ -2264,6 +2264,48 @@
   dependencies:
     tslib "2.4.0"
 
+"@ngrx/component@^14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/component/-/component-14.3.1.tgz#f080f79432bcc627e5233b57352a0d256b09ca2f"
+  integrity sha512-q6tEUfs7Pgl9yPjlxdAXR+HWvE6cbcrfMA4zTBOCUiqHyZzbocr0yhsEuO/zZhSGQvT5FphuQE+6BhU01eplBw==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/effects@^14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-14.3.1.tgz#b22dcbc084c85d02b8ae34a4c6b7ce83f66d58d3"
+  integrity sha512-2+hTlw79f8snayMCBDdVUYaAneowhXJwR0pwhOPAwldv/QufiFaoRA9M26nm9tC4mxIFlGY0gJ03c94/E0sKjQ==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/entity@^14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-14.3.1.tgz#598d8e5fe37ba80716705b9d7e1305421b39e6c3"
+  integrity sha512-7YHbJmHEl88IUtw/L34BThaT8kjs3pWPZDVrsJDncvKQUf2NqwiAMSvn6z87OguxUbEmKi4Yqs8vdMGe+a7ZKQ==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/router-store@^14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/router-store/-/router-store-14.3.1.tgz#58647679d907f29f2510cf0f8c4ff10457e5656e"
+  integrity sha512-LN8Wqee4h9sCIhMJbbmCKxnMX6F3aCB2xFXrkYZdF2H0oAL5jznhnALankQRQqzv6/Y6E98nFurthPbaK85dAA==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/store-devtools@^14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-14.3.1.tgz#867e3b7afaf393e251b1452b44191e4ef5f5ab5e"
+  integrity sha512-FbCYcMMfR0NbkQdkYlNDscskz3jWbntA1gybndrG9yP8zmPKHUb8i0pPXOXg+gV/jfHM2mKrj4u0SLZCOUdeXw==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/store@^14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-14.3.1.tgz#b371f7cce3c9825ba017b220928228903b3bc31e"
+  integrity sha512-5fKZVxwyawH8wXuYaAkMfPxLJ+GzdXmjWjQtUkMjpa8lsgEBtIs+UdyirgwjBcwYUt0ewp2CM14+Io5eeb8bQA==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngtools/webpack@14.2.3":
   version "14.2.3"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-14.2.3.tgz#ce693ebaff5844f86ef2e93cd84c9710dc886e0a"
@@ -3430,6 +3472,11 @@ acorn@^8.4.1, acorn@^8.5.0, acorn@^8.7.1, acorn@^8.8.0:
   version "8.8.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.0.tgz#88c0187620435c7f6015803f5539dae05a9dbea8"
   integrity sha512-QOxyigPVrpZ2GXT+PFyZTl6TtOFc5egxHIP9IlQ+RbupQuX4RkT/Bee4/kQuC02Xkzg84JcT7oLYtDIQxp+v7w==
+
+add@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
+  integrity sha512-j5QzrmsokwWWp6kUcJQySpbG+xfOBqqKnup3OIk1pz+kB/80SLorZ9V8zHFLO92Lcd+hbvq8bT+zOGoPkmBV0Q==
 
 adjust-sourcemap-loader@^4.0.0:
   version "4.0.0"
@@ -10731,7 +10778,7 @@ tsconfig-paths@^3.9.0:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tslib@2.4.0, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.4.0:
+tslib@2.4.0, tslib@^2.0.0, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==

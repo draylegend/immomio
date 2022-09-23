@@ -7,5 +7,5 @@ import { environment } from './environments/environment';
 environment.production && enableProdMode();
 
 bootstrapApplication(AppComponent, {
-  providers,
-}).catch((err) => console.error(err));
+  providers: providers(environment),
+}).catch(err => console.error(err));
