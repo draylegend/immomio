@@ -1,0 +1,56 @@
+:host {
+  display: grid;
+  grid-template: 'title title' 'img img' 'subtitle subtitle' 'date time' 'visitors visitors';
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto auto auto 1fr;
+  gap: 8px;
+  padding: 16px;
+}
+
+.mat-subheading-2 {
+  margin: 0;
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
+  grid-area: title;
+}
+
+img {
+  border-radius: 4px;
+  grid-area: img;
+  width: 25vw;
+}
+
+.subtitle {
+  grid-area: subtitle;
+
+  * {
+    margin: 0;
+  }
+}
+
+.date {
+  grid-area: date;
+}
+
+.time {
+  grid-area: time;
+}
+
+.visitors {
+  grid-area: visitors;
+  align-self: start;
+}
+
+.date,
+.time,
+.visitors {
+  display: flex;
+  align-items: end;
+
+  mat-icon {
+    margin-right: 4px;
+  }
+}
