@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideNoopAnimations } from '@angular/platform-browser/animations';
 import { AppointmentFacade, initialState } from '@immomio/appointment/domain';
 import { provideMockStore } from '@ngrx/store/testing';
 import { AppointmentFeatureComponent } from './appointment-feature.component';
@@ -10,7 +11,11 @@ describe('AppointmentFeatureComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [AppointmentFeatureComponent],
-      providers: [AppointmentFacade, provideMockStore({ initialState })],
+      providers: [
+        AppointmentFacade,
+        provideNoopAnimations(),
+        provideMockStore({ initialState }),
+      ],
     });
 
     fixture = TestBed.createComponent(AppointmentFeatureComponent);

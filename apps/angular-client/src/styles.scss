@@ -18,8 +18,16 @@ $light-theme: mat.define-light-theme(
 
 html,
 body,
-im-root {
+im-root,
+ng-component {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
-  height: 100%;
   margin: 0;
+}
+
+html,
+body {
+  height: 100%;
 }

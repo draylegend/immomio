@@ -1,5 +1,9 @@
 import { HttpClientModule } from '@angular/common/http';
 import { importProvidersFrom, Provider } from '@angular/core';
+import {
+  MAT_FORM_FIELD_DEFAULT_OPTIONS,
+  MatFormFieldDefaultOptions,
+} from '@angular/material/form-field';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter } from '@angular/router';
 import { Env } from '@immomio/shared/domain';
@@ -38,4 +42,8 @@ export default (env: Env) =>
     provideAnimations(),
     provideRouter(routes),
     provideApollo(env),
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { appearance: 'outline' } as MatFormFieldDefaultOptions,
+    },
   ] as Provider[];
