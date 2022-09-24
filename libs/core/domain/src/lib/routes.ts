@@ -1,13 +1,8 @@
 import { Routes } from '@angular/router';
+import { appointmentRoutes } from '@immomio/appointment/feature';
 
 export default [
-  {
-    path: 'appointments',
-    loadComponent: () =>
-      import('@immomio/appointment/feature').then(
-        m => m.AppointmentFeatureComponent,
-      ),
-  },
+  appointmentRoutes,
   {
     path: '**',
     redirectTo: 'appointments',

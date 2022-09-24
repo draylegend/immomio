@@ -10,7 +10,7 @@ export default (env: Env) =>
     useFactory: (httpLink: HttpLink) =>
       ({
         cache: new InMemoryCache(),
-        link: httpLink.create({ uri: env.api }),
+        link: httpLink.create({ uri: o => `${env.api}?${o.operationName}` }),
       } as ApolloClientOptions<unknown>),
     deps: [HttpLink],
   } as FactoryProvider);
