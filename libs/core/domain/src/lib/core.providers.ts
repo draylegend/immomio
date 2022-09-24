@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { importProvidersFrom, Provider } from '@angular/core';
+import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter } from '@angular/router';
 import { Env } from '@immomio/shared/domain';
 import { EffectsModule } from '@ngrx/effects';
@@ -34,6 +35,7 @@ export default (env: Env) =>
         autoPause: true, // Pauses recording actions and state changes when the extension window is not open
       }),
     ),
+    provideAnimations(),
     provideRouter(routes),
     provideApollo(env),
   ] as Provider[];
