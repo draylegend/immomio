@@ -1,0 +1,25 @@
+:host {
+  display: grid;
+  grid-template-areas:
+    'filter filter'
+    'calendar week'
+    'next-viewing week';
+  grid-template-rows: auto auto 1fr;
+  grid-template-columns: auto 1fr;
+}
+
+im-filter {
+  grid-area: filter;
+}
+
+im-calendar {
+  grid-area: calendar;
+}
+
+im-week {
+  grid-area: week;
+}
+
+im-next-viewing {
+  grid-area: next-viewing;
+}
