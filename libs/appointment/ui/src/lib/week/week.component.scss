@@ -1,11 +1,35 @@
+:host {
+  display: grid;
+  grid-template:
+    'header header'
+    '_ days'
+    'time content';
+  grid-template-columns: 64px 1fr;
+  grid-template-rows: auto auto 1fr;
+}
+
 header {
   display: flex;
   align-items: center;
   padding: 8px;
   border-bottom: 1px solid lightgray;
+  grid-area: header;
 }
 
 .mat-subheading-2 {
   flex-grow: 1;
   margin: 0 0 0 16px;
+}
+
+im-days {
+  grid-area: days;
+}
+
+im-time {
+  grid-area: time;
+  border-top: 1px solid lightgray;
+}
+
+im-week-content {
+  grid-area: content;
 }

@@ -1,6 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { DaysComponent } from '../days/days.component';
+import { TimeComponent } from '../time/time.component';
 import { WeekContentComponent } from '../week-content/week-content.component';
 
 @Component({
@@ -9,6 +11,12 @@ import { WeekContentComponent } from '../week-content/week-content.component';
   standalone: true,
   styleUrls: ['./week.component.scss'],
   templateUrl: './week.component.html',
-  imports: [MatButtonModule, MatIconModule, WeekContentComponent],
+  imports: [
+    MatButtonModule,
+    MatIconModule,
+    WeekContentComponent,
+    DaysComponent,
+    TimeComponent,
+  ],
 })
 export class WeekComponent {}

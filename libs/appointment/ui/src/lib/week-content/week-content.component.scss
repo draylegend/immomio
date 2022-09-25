@@ -1,0 +1,7 @@
+:host {
+  flex-grow: 1;
+  background-image: linear-gradient(lightgray 1px, transparent 1px),
+    linear-gradient(90deg, lightgray 1px, white 1px);
+  background-size: 100px 60px;
+  grid-gap: 16px;
+}
