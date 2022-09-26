@@ -1,4 +1,4 @@
-import { JsonPipe, NgForOf } from '@angular/common';
+import { JsonPipe, NgClass, NgForOf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
@@ -7,11 +7,12 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   standalone: true,
   styleUrls: ['./days.component.scss'],
   templateUrl: './days.component.html',
-  imports: [NgForOf, JsonPipe],
+  imports: [NgForOf, JsonPipe, NgClass],
 })
 export class DaysComponent {
   dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   displayDays!: { date: number; day: number }[];
+  now = new Date().getDay();
 
   @Input() set days(val: number[] | undefined) {
     const d = new Date();

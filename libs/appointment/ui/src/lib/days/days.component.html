@@ -1,3 +1,9 @@
-<div *ngFor="let day of displayDays">
+<div
+  *ngFor="let day of displayDays"
+  [ngClass]="{
+    active: day.day === now,
+    'past-day': day.day < now
+  }"
+>
   {{ day.date }} {{ dayNames[day.day] }}
 </div>
