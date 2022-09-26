@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppointmentFacade } from '@immomio/appointment/domain';
+import { provideMockStore } from '@ngrx/store/testing';
 import { DetailsFeatureComponent } from './details-feature.component';
 
 describe('AppointmentFeaturesDetailsFeatureComponent', () => {
@@ -8,6 +10,7 @@ describe('AppointmentFeaturesDetailsFeatureComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [DetailsFeatureComponent],
+      providers: [AppointmentFacade, provideMockStore()],
     });
 
     fixture = TestBed.createComponent(DetailsFeatureComponent);

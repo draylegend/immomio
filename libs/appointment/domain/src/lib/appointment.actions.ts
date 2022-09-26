@@ -8,6 +8,7 @@ export const appointmentActions = createActionGroup({
     loadSuccess: props<{ appointments: AppointmentObject[] }>(),
     loadFailure: props<{ error: string }>(),
     show: props<{ appointmentIds: string[] }>(),
+    navigateBack: emptyProps(),
   },
 });
 

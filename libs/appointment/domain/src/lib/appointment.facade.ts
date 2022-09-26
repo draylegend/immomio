@@ -11,6 +11,7 @@ export class AppointmentFacade {
   visibleDays$ = this.store.select(selectors.selectVisibleDays);
   viewings$ = this.store.select(selectors.selectViewings);
   weekSpan$ = this.store.select(selectors.selectWeekSpan);
+  history: string[] = [];
 
   constructor(private store: Store<State>) {
     store.dispatch(appointmentActions.load());
@@ -26,5 +27,9 @@ export class AppointmentFacade {
 
   showAppointment(appointmentIds: string[]): void {
     this.store.dispatch(appointmentActions.show({ appointmentIds }));
+  }
+
+  navigateBack(): void {
+    this.store.dispatch(appointmentActions.navigateback());
   }
 }
