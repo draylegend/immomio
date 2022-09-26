@@ -13,8 +13,10 @@ export class AppointmentFacade {
   weekSpan$ = this.store.select(selectors.selectWeekSpan);
   history: string[] = [];
 
-  constructor(private store: Store<State>) {
-    store.dispatch(appointmentActions.load());
+  constructor(private store: Store<State>) {}
+
+  load(): void {
+    this.store.dispatch(appointmentActions.load());
   }
 
   prevWeek(): void {

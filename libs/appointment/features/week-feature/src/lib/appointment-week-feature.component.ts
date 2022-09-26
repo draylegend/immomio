@@ -24,5 +24,7 @@ import { PushModule } from '@ngrx/component';
   ],
 })
 export class AppointmentWeekFeatureComponent {
-  constructor(public facade: AppointmentFacade) {}
+  constructor(public facade: AppointmentFacade) {
+    facade.load();
+  }
 }
