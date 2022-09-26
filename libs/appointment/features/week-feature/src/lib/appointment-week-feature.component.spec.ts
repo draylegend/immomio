@@ -6,15 +6,15 @@ import {
   selectViewings,
 } from '@immomio/appointment/domain';
 import { provideMockStore } from '@ngrx/store/testing';
-import { AppointmentFeatureComponent } from './appointment-feature.component';
+import { AppointmentWeekFeatureComponent } from './appointment-week-feature.component';
 
-describe('AppointmentFeatureComponent', () => {
-  let fixture: ComponentFixture<AppointmentFeatureComponent>;
-  let component: AppointmentFeatureComponent;
+describe('AppointmentFeaturesWeekFeatureComponent', () => {
+  let fixture: ComponentFixture<AppointmentWeekFeatureComponent>;
+  let component: AppointmentWeekFeatureComponent;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [AppointmentFeatureComponent],
+      imports: [AppointmentWeekFeatureComponent],
       providers: [
         AppointmentFacade,
         provideNoopAnimations(),
@@ -25,7 +25,7 @@ describe('AppointmentFeatureComponent', () => {
       ],
     });
 
-    fixture = TestBed.createComponent(AppointmentFeatureComponent);
+    fixture = TestBed.createComponent(AppointmentWeekFeatureComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

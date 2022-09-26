@@ -11,8 +11,8 @@ import { PushModule } from '@ngrx/component';
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  styleUrls: ['./appointment-feature.component.scss'],
-  templateUrl: './appointment-feature.component.html',
+  styleUrls: ['./appointment-week-feature.component.scss'],
+  templateUrl: './appointment-week-feature.component.html',
   imports: [
     CalendarComponent,
     FilterComponent,
@@ -21,6 +21,6 @@ import { PushModule } from '@ngrx/component';
     WeekComponent,
   ],
 })
-export class AppointmentFeatureComponent {
+export class AppointmentWeekFeatureComponent {
   constructor(public facade: AppointmentFacade) {}
 }

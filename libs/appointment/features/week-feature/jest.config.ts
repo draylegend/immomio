@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
-  displayName: 'appointment-feature',
-  preset: '../../../jest.preset.js',
+  displayName: 'appointment-features-week-feature',
+  preset: '../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -9,7 +9,8 @@ export default {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../coverage/libs/appointment/feature',
+  coverageDirectory:
+    '../../../../coverage/libs/appointment/features/week-feature',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },
