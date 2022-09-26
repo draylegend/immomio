@@ -2,6 +2,11 @@
   flex-grow: 1;
   background-image: linear-gradient(lightgray 1px, transparent 1px),
     linear-gradient(90deg, lightgray 1px, white 1px);
-  background-size: calc(100% / 7) 60px;
+  background-size: calc(100% / 7) 100px;
   grid-gap: 16px;
+  position: relative;
+}
+
+im-viewings {
+  width: calc(100% / 7);
 }

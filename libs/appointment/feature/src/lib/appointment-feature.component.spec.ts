@@ -3,7 +3,7 @@ import { provideNoopAnimations } from '@angular/platform-browser/animations';
 import {
   AppointmentFacade,
   initialState,
-  selectAppointments,
+  selectViewings,
 } from '@immomio/appointment/domain';
 import { provideMockStore } from '@ngrx/store/testing';
 import { AppointmentFeatureComponent } from './appointment-feature.component';
@@ -20,7 +20,7 @@ describe('AppointmentFeatureComponent', () => {
         provideNoopAnimations(),
         provideMockStore({
           initialState,
-          selectors: [{ selector: selectAppointments, value: [] }],
+          selectors: [{ selector: selectViewings, value: [] }],
         }),
       ],
     });

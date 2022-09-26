@@ -1,1 +1,5 @@
-<pre>{{ appointments | json }}</pre>
+<im-viewings
+  *ngFor="let v of viewings | keyvalue"
+  [offsets]="v.key"
+  [appointments]="v.value"
+></im-viewings>

@@ -1,0 +1,10 @@
+<h3 class="mat-subheading-2">{{ appointments?.length }} viewing(s)</h3>
+
+<div>
+  <img
+    *ngFor="let a of appointments; index as i"
+    [style]="{ '--img-offset': i }"
+    alt="appartment"
+    src="assets/nyc-apartment.jpg"
+  />
+</div>

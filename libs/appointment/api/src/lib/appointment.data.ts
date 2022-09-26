@@ -1,7 +1,7 @@
 export default [
   {
     id: '2442449',
-    date: '2019-03-09T11:00:00.000+0000',
+    date: '2022-09-26T07:00:00.000+0000',
     maxInviteeCount: 3,
     attendeeCount: 2,
     showContactInformation: false,
@@ -40,7 +40,7 @@ export default [
   },
   {
     id: '2442150',
-    date: '2019-02-27T11:00:00.000+0000',
+    date: '2022-09-26T07:00:00.000+0000',
     maxInviteeCount: 2,
     attendeeCount: 1,
     showContactInformation: false,
@@ -79,7 +79,7 @@ export default [
   },
   {
     id: '2442901',
-    date: '2019-02-28T11:00:00.000+0000',
+    date: '2022-09-27T08:00:00.000+0000',
     maxInviteeCount: 3,
     attendeeCount: 1,
     showContactInformation: false,

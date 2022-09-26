@@ -7,3 +7,7 @@ export interface State extends EntityState<AppointmentObject> {
   error: string;
   loading: boolean;
 }
+
+export interface Viewings {
+  [offset: string]: AppointmentObject[];
+}
