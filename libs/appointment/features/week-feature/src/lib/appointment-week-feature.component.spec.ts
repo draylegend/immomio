@@ -4,6 +4,8 @@ import {
   AppointmentFacade,
   initialState,
   selectViewings,
+  selectVisibleDays,
+  selectWeekSpan,
 } from '@immomio/appointment/domain';
 import { provideMockStore } from '@ngrx/store/testing';
 import { AppointmentWeekFeatureComponent } from './appointment-week-feature.component';
@@ -20,7 +22,11 @@ describe('AppointmentFeaturesWeekFeatureComponent', () => {
         provideNoopAnimations(),
         provideMockStore({
           initialState,
-          selectors: [{ selector: selectViewings, value: [] }],
+          selectors: [
+            { selector: selectViewings, value: [] },
+            { selector: selectVisibleDays, value: [] },
+            { selector: selectWeekSpan, value: { selectedYear: 2022 } },
+          ],
         }),
       ],
     });
