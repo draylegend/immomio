@@ -13,6 +13,7 @@ export const appointmentActions = createActionGroup({
 export const week = createActionGroup({
   source: 'week',
   events: {
+    current: emptyProps(),
     prev: emptyProps(),
     next: emptyProps(),
   },

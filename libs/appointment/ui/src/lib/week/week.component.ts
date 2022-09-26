@@ -15,7 +15,7 @@ import { WeekContentComponent } from '../week-content/week-content.component';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'im-week[days][viewings]',
+  selector: 'im-week[days][viewings][weekSpan]',
   standalone: true,
   styleUrls: ['./week.component.scss'],
   templateUrl: './week.component.html',
@@ -32,6 +32,10 @@ export class WeekComponent {
   @Input() days?: { day: number; date: number }[];
 
   @Input() viewings?: Viewings;
+
+  @Input() weekSpan?: { start: Date; end: Date };
+
+  @Output() today = new EventEmitter();
 
   @Output() prev = new EventEmitter();
 

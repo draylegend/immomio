@@ -8,5 +8,6 @@
   (next)="facade.nextWeek()"
   (prev)="facade.prevWeek()"
   [days]="facade.visibleDays$ | ngrxPush"
+  [weekSpan]="facade.weekSpan$ | ngrxPush"
   [viewings]="facade.viewings$ | ngrxPush"
 ></im-week>

@@ -10,6 +10,7 @@ export class AppointmentFacade {
   loading$ = this.store.select(feature.selectLoading);
   visibleDays$ = this.store.select(selectors.selectVisibleDays);
   viewings$ = this.store.select(selectors.selectViewings);
+  weekSpan$ = this.store.select(selectors.selectWeekSpan);
 
   constructor(private store: Store<State>) {
     store.dispatch(appointmentActions.load());
