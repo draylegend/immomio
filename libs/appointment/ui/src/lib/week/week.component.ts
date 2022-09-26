@@ -1,5 +1,11 @@
 import { JsonPipe } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { Viewings } from '@immomio/appointment/domain';
@@ -26,4 +32,8 @@ export class WeekComponent {
   @Input() days?: { day: number; date: number }[];
 
   @Input() viewings?: Viewings;
+
+  @Output() prev = new EventEmitter();
+
+  @Output() next = new EventEmitter();
 }

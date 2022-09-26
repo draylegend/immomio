@@ -25,5 +25,5 @@ export const selectViewings = createSelector(selectFeature, s => {
 });
 
 export const selectVisibleDays = createSelector(selectFeature, s =>
-  s.visibleDays.map(day => ({ day, date: s.firstWeekDay + day })),
+  s.visibleDays.map(day => ({ day, date: s.selectedWeek + day })),
 );

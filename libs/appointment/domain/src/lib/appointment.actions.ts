@@ -9,3 +9,11 @@ export const appointmentActions = createActionGroup({
     loadFailure: props<{ error: string }>(),
   },
 });
+
+export const week = createActionGroup({
+  source: 'week',
+  events: {
+    prev: emptyProps(),
+    next: emptyProps(),
+  },
+});

@@ -5,6 +5,8 @@
 <im-next-viewing></im-next-viewing>
 
 <im-week
-  [viewings]="facade.viewings$ | ngrxPush"
+  (next)="facade.nextWeek()"
+  (prev)="facade.prevWeek()"
   [days]="facade.visibleDays$ | ngrxPush"
+  [viewings]="facade.viewings$ | ngrxPush"
 ></im-week>

@@ -1,1 +1,5 @@
-export const getFirstWeekDay = (d = new Date()) => d.getDate() - d.getDay();
+export const getFirstWeekDay = (d = new Date()): Date => {
+  d.setDate(d.getDate() - d.getDay());
+
+  return d;
+};
