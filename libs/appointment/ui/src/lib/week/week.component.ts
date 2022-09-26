@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { DaysComponent } from '../days/days.component';
@@ -7,7 +7,7 @@ import { WeekContentComponent } from '../week-content/week-content.component';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'im-week',
+  selector: 'im-week[days]',
   standalone: true,
   styleUrls: ['./week.component.scss'],
   templateUrl: './week.component.html',
@@ -19,4 +19,6 @@ import { WeekContentComponent } from '../week-content/week-content.component';
     TimeComponent,
   ],
 })
-export class WeekComponent {}
+export class WeekComponent {
+  @Input() days?: number[];
+}
