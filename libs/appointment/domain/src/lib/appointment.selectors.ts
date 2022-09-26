@@ -23,3 +23,7 @@ export const selectViewings = createSelector(selectFeature, s => {
 
   return res;
 });
+
+export const selectVisibleDays = createSelector(selectFeature, s =>
+  s.visibleDays.map(day => ({ day, date: s.firstWeekDay + day })),
+);

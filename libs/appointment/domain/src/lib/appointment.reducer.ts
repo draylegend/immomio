@@ -3,9 +3,13 @@ import { appointmentActions } from './appointment.actions';
 import { APPOINTMENT_KEY, State } from './appointment.models';
 import { adapter } from './appointment.selectors';
 
+export const getFirstWeekDay = (d = new Date()) => d.getDate() - d.getDay();
+
 export const initialState: State = adapter.getInitialState({
+  firstWeekDay: getFirstWeekDay(),
   loading: false,
   error: '',
+  visibleDays: [0, 1, 2, 3, 4, 5, 6],
 });
 
 export const feature = createFeature({

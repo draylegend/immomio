@@ -1,5 +1,5 @@
 <div
-  *ngFor="let day of displayDays"
+  *ngFor="let day of visibleDays"
   [ngClass]="{
     active: day.day === now,
     'past-day': day.day < now

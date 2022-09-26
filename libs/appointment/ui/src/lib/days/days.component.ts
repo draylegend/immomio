@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'im-days[days]',
+  selector: 'im-days[visibleDays]',
   standalone: true,
   styleUrls: ['./days.component.scss'],
   templateUrl: './days.component.html',
@@ -11,13 +11,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class DaysComponent {
   dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  displayDays!: { date: number; day: number }[];
   now = new Date().getDay();
 
-  @Input() set days(val: number[] | undefined) {
-    const d = new Date();
-    const firstDay = d.getDate() - d.getDay();
-
-    this.displayDays = (val || []).map(day => ({ day, date: firstDay + day }));
-  }
+  @Input() visibleDays?: { day: number; date: number }[];
 }

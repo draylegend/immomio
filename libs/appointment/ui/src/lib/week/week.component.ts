@@ -23,7 +23,7 @@ import { WeekContentComponent } from '../week-content/week-content.component';
   ],
 })
 export class WeekComponent {
-  @Input() days?: number[];
+  @Input() days?: { day: number; date: number }[];
 
   @Input() viewings?: Viewings;
 }
