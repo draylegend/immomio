@@ -2,8 +2,11 @@ import { KeyValuePipe, NgForOf } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  EventEmitter,
   HostBinding,
+  HostListener,
   Input,
+  Output,
 } from '@angular/core';
 import { AppointmentObject } from '@immomio/appointment/api';
 
@@ -20,6 +23,8 @@ export class ViewingsComponent {
 
   @Input() offsets?: string;
 
+  @Output() clickChanges = new EventEmitter<string[]>();
+
   @HostBinding('style') get style(): Record<string, string> {
     const [x, y] = this.offsets?.split(',') || [];
 
@@ -27,5 +32,9 @@ export class ViewingsComponent {
       '--viewings-offset-x': x,
       '--viewings-offset-y': y,
     };
+  }
+
+  @HostListener('click') hostClick() {
+    this.clickChanges.emit(this.appointments?.map(a => a.id));
   }
 }

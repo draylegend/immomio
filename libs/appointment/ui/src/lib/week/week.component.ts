@@ -40,4 +40,6 @@ export class WeekComponent {
   @Output() prev = new EventEmitter();
 
   @Output() next = new EventEmitter();
+
+  @Output() showAppointment = new EventEmitter<string[]>();
 }

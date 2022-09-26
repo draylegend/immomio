@@ -7,10 +7,11 @@ export const appointmentActions = createActionGroup({
     load: emptyProps(),
     loadSuccess: props<{ appointments: AppointmentObject[] }>(),
     loadFailure: props<{ error: string }>(),
+    show: props<{ appointmentIds: string[] }>(),
   },
 });
 
-export const week = createActionGroup({
+export const weekActions = createActionGroup({
   source: 'week',
   events: {
     current: emptyProps(),

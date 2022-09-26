@@ -1,5 +1,11 @@
 import { KeyValuePipe, NgForOf } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 import { Viewings } from '@immomio/appointment/domain';
 import { LetModule } from '@ngrx/component';
 import { map, timer } from 'rxjs';
@@ -22,6 +28,8 @@ import { ViewingsComponent } from '../viewings/viewings.component';
 })
 export class WeekContentComponent {
   @Input() viewings?: Viewings;
+
+  @Output() showAppointment = new EventEmitter<string[]>();
 
   pointer$ = timer(0, 1000).pipe(
     map(() => {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { appointmentActions, week } from './appointment.actions';
+import { appointmentActions, weekActions } from './appointment.actions';
 import { State } from './appointment.models';
 import { feature } from './appointment.reducer';
 import * as selectors from './appointment.selectors';
@@ -17,10 +17,14 @@ export class AppointmentFacade {
   }
 
   prevWeek(): void {
-    this.store.dispatch(week.prev());
+    this.store.dispatch(weekActions.prev());
   }
 
   nextWeek(): void {
-    this.store.dispatch(week.next());
+    this.store.dispatch(weekActions.next());
+  }
+
+  showAppointment(appointmentIds: string[]): void {
+    this.store.dispatch(appointmentActions.show({ appointmentIds }));
   }
 }

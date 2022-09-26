@@ -1,4 +1,5 @@
 <im-viewings
+  (clickChanges)="showAppointment.emit($event)"
   *ngFor="let v of viewings | keyvalue"
   [appointments]="v.value"
   [offsets]="v.key"

@@ -3,7 +3,7 @@ import {
   getFirstWeekDay,
 } from '@immomio/appointment/utils';
 import { createFeature, createReducer, on } from '@ngrx/store';
-import { appointmentActions, week } from './appointment.actions';
+import { appointmentActions, weekActions } from './appointment.actions';
 import { APPOINTMENT_KEY, State } from './appointment.models';
 import { adapter } from './appointment.selectors';
 
@@ -37,12 +37,18 @@ export const feature = createFeature({
 
     // Change week
     on(
-      week.current,
+      weekActions.current,
       (s): State => ({ ...s, selectedWeek: new Date().getDate() }),
     ),
 
-    on(week.prev, (s): State => ({ ...s, selectedWeek: s.selectedWeek - 1 })),
+    on(
+      weekActions.prev,
+      (s): State => ({ ...s, selectedWeek: s.selectedWeek - 1 }),
+    ),
 
-    on(week.next, (s): State => ({ ...s, selectedWeek: s.selectedWeek + 1 })),
+    on(
+      weekActions.next,
+      (s): State => ({ ...s, selectedWeek: s.selectedWeek + 1 }),
+    ),
   ),
 });

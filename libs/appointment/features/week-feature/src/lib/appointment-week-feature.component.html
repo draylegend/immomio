@@ -7,7 +7,8 @@
 <im-week
   (next)="facade.nextWeek()"
   (prev)="facade.prevWeek()"
+  (showAppointment)="facade.showAppointment($event)"
   [days]="facade.visibleDays$ | ngrxPush"
-  [weekSpan]="facade.weekSpan$ | ngrxPush"
   [viewings]="facade.viewings$ | ngrxPush"
+  [weekSpan]="facade.weekSpan$ | ngrxPush"
 ></im-week>

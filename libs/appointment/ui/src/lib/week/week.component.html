@@ -16,4 +16,7 @@
 
 <im-time></im-time>
 
-<im-week-content [viewings]="viewings"></im-week-content>
+<im-week-content
+  (showAppointment)="showAppointment.emit($event)"
+  [viewings]="viewings"
+></im-week-content>
