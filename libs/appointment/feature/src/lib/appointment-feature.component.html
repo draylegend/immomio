@@ -4,4 +4,7 @@
 
 <im-next-viewing></im-next-viewing>
 
-<im-week [days]="facade.days$ | ngrxPush"></im-week>
+<im-week
+  [appointments]="facade.appointments$ | ngrxPush"
+  [days]="facade.days$ | ngrxPush"
+></im-week>

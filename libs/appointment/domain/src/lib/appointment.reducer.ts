@@ -1,14 +1,15 @@
 import { createFeature, createReducer, on } from '@ngrx/store';
 import { appointmentActions } from './appointment.actions';
+import { APPOINTMENT_KEY, State } from './appointment.model';
 import { adapter } from './appointment.selectors';
 
-export const initialState = adapter.getInitialState({
+export const initialState: State = adapter.getInitialState({
   loading: false,
   error: '',
 });
 
 export const feature = createFeature({
-  name: 'appointment',
+  name: APPOINTMENT_KEY,
   reducer: createReducer(
     initialState,
 
