@@ -1,5 +1,9 @@
 <im-viewings
   *ngFor="let v of viewings | keyvalue"
-  [offsets]="v.key"
   [appointments]="v.value"
+  [offsets]="v.key"
 ></im-viewings>
+
+<im-pointer *ngrxLet="pointer$; let p" [style.--pointer-y.px]="p.y">{{
+  p.time
+}}</im-pointer>
