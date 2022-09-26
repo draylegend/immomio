@@ -32,3 +32,7 @@ export const selectViewings = createSelector(selectFeature, s => {
 export const selectWeekSpan = createSelector(selectFeature, s =>
   getWeekSpan(s.selectedYear, s.selectedWeek),
 );
+
+export const selectSelectedViewings = createSelector(selectFeature, s =>
+  s.selectedViewings.map(id => s.entities[id]),
+);
