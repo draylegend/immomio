@@ -8,6 +8,7 @@
     "appointment-domain": "libs/appointment/domain",
     "appointment-feature": "libs/appointment/feature",
     "appointment-ui": "libs/appointment/ui",
+    "appointment-utils": "libs/appointment/utils",
     "core-domain": "libs/core/domain",
     "nest-api": "apps/nest-api",
     "shared-domain": "libs/shared/domain"
