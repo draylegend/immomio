@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { AppointmentFacade } from '@immomio/appointment/domain';
 import {
   CalendarComponent,
@@ -19,6 +20,7 @@ import { PushModule } from '@ngrx/component';
     NextViewingComponent,
     PushModule,
     WeekComponent,
+    RouterOutlet,
   ],
 })
 export class AppointmentWeekFeatureComponent {

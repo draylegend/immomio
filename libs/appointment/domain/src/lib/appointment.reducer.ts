@@ -14,6 +14,7 @@ export const initialState: State = adapter.getInitialState({
   loading: false,
   selectedWeek: getCurrentWeekNumber(),
   selectedYear: d.getFullYear(),
+  selectedViewings: [],
   visibleDays: [0, 1, 2, 3, 4, 5, 6],
 });
 
@@ -33,6 +34,14 @@ export const feature = createFeature({
 
     on(appointmentActions.loadfailure, (s, { error }) =>
       adapter.setAll([], { ...s, error, loading: false }),
+    ),
+
+    on(
+      appointmentActions.show,
+      (s, { appointmentIds }): State => ({
+        ...s,
+        selectedViewings: appointmentIds,
+      }),
     ),
 
     // Change week

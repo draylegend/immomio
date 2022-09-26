@@ -8,6 +8,7 @@ export interface State extends EntityState<AppointmentObject> {
   loading: boolean;
   selectedWeek: number;
   selectedYear: number;
+  selectedViewings: string[];
   visibleDays: number[];
 }
 

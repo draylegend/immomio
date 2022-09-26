@@ -6,7 +6,7 @@ import {
 } from '@angular/material/form-field';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter } from '@angular/router';
-import { Env } from '@immomio/shared/domain';
+import { Env, RouterEffects } from '@immomio/shared/domain';
 import { EffectsModule } from '@ngrx/effects';
 import { routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
@@ -18,7 +18,7 @@ export default (env: Env) =>
   [
     importProvidersFrom(
       HttpClientModule,
-      EffectsModule.forRoot(),
+      EffectsModule.forRoot([RouterEffects]),
       StoreModule.forRoot(
         { router: routerReducer },
         {
