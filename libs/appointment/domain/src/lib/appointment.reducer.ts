@@ -1,9 +1,8 @@
+import { getFirstWeekDay } from '@immomio/appointment/utils';
 import { createFeature, createReducer, on } from '@ngrx/store';
 import { appointmentActions } from './appointment.actions';
 import { APPOINTMENT_KEY, State } from './appointment.models';
 import { adapter } from './appointment.selectors';
-
-export const getFirstWeekDay = (d = new Date()) => d.getDate() - d.getDay();
 
 export const initialState: State = adapter.getInitialState({
   firstWeekDay: getFirstWeekDay(),
