@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@immomio/appointment-features-details-feature": [
+        "libs/appointment/features/details-feature/src/index.ts"
+      ],
       "@immomio/appointment-features-week-feature": [
         "libs/appointment/features/week-feature/src/index.ts"
       ],
