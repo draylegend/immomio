@@ -8,6 +8,10 @@ export class TodayPipe implements PipeTransform {
   transform(date: Date): boolean {
     const d = new Date();
 
-    return date.getDate() === d.getDate();
+    return (
+      date.getFullYear() === d.getFullYear() &&
+      date.getMonth() === d.getMonth() &&
+      date.getDate() === d.getDate()
+    );
   }
 }
