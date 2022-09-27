@@ -1,6 +1,6 @@
 <header>
   <h3 class="mat-subheading-2">
-    {{ weekSpan?.start?.getDate() }} - {{ weekSpan?.end?.getDate() }}
+    {{ weekSpan?.start | date }} - {{ weekSpan?.end | date }}
   </h3>
 
   <button (click)="today.emit()" mat-stroked-button>Today</button>

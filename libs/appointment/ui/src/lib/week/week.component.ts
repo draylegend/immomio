@@ -1,4 +1,4 @@
-import { JsonPipe } from '@angular/common';
+import { DatePipe, JsonPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -26,6 +26,7 @@ import { WeekContentComponent } from '../week-content/week-content.component';
     DaysComponent,
     TimeComponent,
     JsonPipe,
+    DatePipe,
   ],
 })
 export class WeekComponent {
