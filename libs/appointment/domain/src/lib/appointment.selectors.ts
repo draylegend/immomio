@@ -30,15 +30,19 @@ export const selectWorkingHours = createSelector(
 );
 
 export const selectViewings = createSelector(selectFeature, s => {
+  const { start, end } = getWeekSpan(s.selectedWeek, s.selectedYear);
   const res: Viewings = {};
 
   selectAll(s).forEach(a => {
     const d = new Date(a.date);
-    const offset = `${d.getDay()},${d.getHours()}`;
 
-    !res[offset] && (res[offset] = []);
+    if (start.getTime() < d.getTime() && d.getTime() < end.getTime()) {
+      const offset = `${d.getDay()},${d.getHours()}`;
 
-    res[offset].push(a);
+      !res[offset] && (res[offset] = []);
+
+      res[offset].push(a);
+    }
   });
 
   return res;
