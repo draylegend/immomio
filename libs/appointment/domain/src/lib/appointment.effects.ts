@@ -13,7 +13,6 @@ export class AppointmentEffects {
   load$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(appointmentActions.load),
-      tap(r => console.log(r)),
       switchMap(() => this.service.fetch()),
       map(res =>
         appointmentActions.loadsuccess({
