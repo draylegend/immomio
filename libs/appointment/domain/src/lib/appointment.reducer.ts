@@ -59,8 +59,8 @@ export const feature = createFeature({
 
     // Change week
     on(
-      weekActions.current,
-      (s): State => ({ ...s, selectedWeek: new Date().getDate() }),
+      weekActions.today,
+      (s): State => ({ ...s, selectedWeek: getCurrentWeekNumber() }),
     ),
 
     on(

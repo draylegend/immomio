@@ -21,6 +21,10 @@ export class AppointmentFacade {
     this.store.dispatch(appointmentActions.load());
   }
 
+  today(): void {
+    this.store.dispatch(weekActions.today());
+  }
+
   prevWeek(): void {
     this.store.dispatch(weekActions.prev());
   }
