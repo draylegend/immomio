@@ -6,5 +6,5 @@
 ></im-viewings>
 
 <im-pointer *ngrxLet="pointer$; let p" [style.--pointer-y.px]="p.y">{{
-  p.time
+  p.date | date: 'h:mm'
 }}</im-pointer>

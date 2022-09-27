@@ -1,4 +1,4 @@
-import { KeyValuePipe, NgForOf } from '@angular/common';
+import { DatePipe, KeyValuePipe, NgForOf } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -24,6 +24,7 @@ import { ViewingsComponent } from '../viewings/viewings.component';
     KeyValuePipe,
     PointerComponent,
     LetModule,
+    DatePipe,
   ],
 })
 export class WeekContentComponent {
@@ -36,14 +37,13 @@ export class WeekContentComponent {
 
   pointer$ = timer(0, 1000).pipe(
     map(() => {
-      const d = new Date();
+      const date = new Date();
       const [h] = this.startWorkingHour?.split(':') || [];
-      const startHour = d.getHours() - Number(h);
-      const mins = `0${d.getMinutes()}`.slice(-2);
+      const startHour = date.getHours() - Number(h);
 
       return {
-        time: `${d.getHours()}:${mins}`,
-        y: ((startHour * 60 + d.getMinutes()) * 100) / 60,
+        date,
+        y: ((startHour * 60 + date.getMinutes()) * 100) / 60,
       };
     }),
   );
