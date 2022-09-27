@@ -15,7 +15,7 @@ import { WeekContentComponent } from '../week-content/week-content.component';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'im-week[days][viewings][weekSpan][workingHours]',
+  selector: 'im-week[workingDays][viewings][weekSpan][workingHours]',
   standalone: true,
   styleUrls: ['./week.component.scss'],
   templateUrl: './week.component.html',
@@ -29,7 +29,7 @@ import { WeekContentComponent } from '../week-content/week-content.component';
   ],
 })
 export class WeekComponent {
-  @Input() days?: { day: number; date: number }[];
+  @Input() workingDays?: { day: number; date: number }[];
 
   @Input() viewings?: Viewings;
 

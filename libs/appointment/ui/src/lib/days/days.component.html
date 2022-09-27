@@ -2,7 +2,7 @@
   *ngFor="let day of workingDays"
   [ngClass]="{
     active: day.date === now,
-    'past-day': day.day < now
+    'past-day': day.date < now
   }"
 >
   {{ day.date }} {{ dayNames[day.day] }}

@@ -10,9 +10,12 @@ export const { selectAll } = adapter.getSelectors();
 
 export const selectFeature = createFeatureSelector<State>(APPOINTMENT_KEY);
 
-export const selectWorkingDays = createSelector(selectFeature, s =>
-  s.workingDays.map(day => ({ day, date: s.selectedWeek + day })),
-);
+export const selectWorkingDays = createSelector(selectFeature, s => {
+  const d = new Date();
+  const firstDay = d.getDate() - d.getDay();
+
+  return s.workingDays.map(day => ({ day, date: firstDay + day }));
+});
 
 export const selectWorkingHours = createSelector(
   selectFeature,

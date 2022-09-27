@@ -8,7 +8,7 @@
   (next)="facade.nextWeek()"
   (prev)="facade.prevWeek()"
   (showAppointment)="facade.showAppointment($event)"
-  [days]="facade.workingDays$ | ngrxPush"
+  [workingDays]="facade.workingDays$ | ngrxPush"
   [viewings]="facade.viewings$ | ngrxPush"
   [weekSpan]="facade.weekSpan$ | ngrxPush"
   [workingHours]="facade.workingHours$ | ngrxPush"
