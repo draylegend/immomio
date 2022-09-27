@@ -5,7 +5,7 @@ const now = () => new Date().getDate();
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'im-days[visibleDays]',
+  selector: 'im-days[workingDays]',
   standalone: true,
   styleUrls: ['./days.component.scss'],
   templateUrl: './days.component.html',
@@ -15,5 +15,5 @@ export class DaysComponent {
   dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   now = now();
 
-  @Input() visibleDays?: { day: number; date: number }[];
+  @Input() workingDays?: { day: number; date: number }[];
 }

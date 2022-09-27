@@ -10,8 +10,8 @@ export const { selectAll } = adapter.getSelectors();
 
 export const selectFeature = createFeatureSelector<State>(APPOINTMENT_KEY);
 
-export const selectVisibleDays = createSelector(selectFeature, s =>
-  s.visibleDays.map(day => ({ day, date: s.selectedWeek + day })),
+export const selectWorkingDays = createSelector(selectFeature, s =>
+  s.workingDays.map(day => ({ day, date: s.selectedWeek + day })),
 );
 
 export const selectViewings = createSelector(selectFeature, s => {

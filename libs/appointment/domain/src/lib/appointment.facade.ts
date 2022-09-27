@@ -8,7 +8,7 @@ import * as selectors from './appointment.selectors';
 @Injectable()
 export class AppointmentFacade {
   loading$ = this.store.select(feature.selectLoading);
-  visibleDays$ = this.store.select(selectors.selectVisibleDays);
+  workingDays$ = this.store.select(selectors.selectWorkingDays);
   viewings$ = this.store.select(selectors.selectViewings);
   weekSpan$ = this.store.select(selectors.selectWeekSpan);
   selectedViewings$ = this.store.select(selectors.selectSelectedViewings);

@@ -15,7 +15,7 @@ export const initialState: State = adapter.getInitialState({
   selectedWeek: getCurrentWeekNumber(),
   selectedYear: d.getFullYear(),
   selectedViewings: [],
-  visibleDays: [0, 1, 2, 3, 4, 5, 6],
+  workingDays: [0, 1, 2, 3, 4, 5, 6],
 });
 
 export const feature = createFeature({
