@@ -30,7 +30,7 @@ import { WeekContentComponent } from '../week-content/week-content.component';
   ],
 })
 export class WeekComponent {
-  @Input() workingDays?: { day: number; date: number }[];
+  @Input() workingDays?: Date[];
 
   @Input() viewings?: Viewings;
 

@@ -12,9 +12,16 @@ export const selectFeature = createFeatureSelector<State>(APPOINTMENT_KEY);
 
 export const selectWorkingDays = createSelector(selectFeature, s => {
   const d = getWeekSpan(s.selectedWeek, s.selectedYear).start;
-  const firstDay = d.getDate() - d.getDay();
 
-  return s.workingDays.map(day => ({ day, date: firstDay + day }));
+  return s.workingDays.map(day => {
+    const date = new Date();
+
+    date.setFullYear(s.selectedYear);
+    date.setMonth(d.getMonth());
+    date.setDate(d.getDate() + day);
+
+    return date;
+  });
 });
 
 export const selectWorkingHours = createSelector(

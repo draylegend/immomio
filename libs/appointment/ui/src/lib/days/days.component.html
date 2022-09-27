@@ -1,9 +1,9 @@
 <div
-  *ngFor="let day of workingDays"
+  *ngFor="let date of workingDays"
   [ngClass]="{
-    active: day.date === now,
-    'past-day': day.date < now
+    active: date | today,
+    'past-day': date.getTime() < time
   }"
 >
-  {{ day.date }} {{ dayNames[day.day] }}
+  {{ date.getDate() }} {{ dayNames[date.getDay()] }}
 </div>

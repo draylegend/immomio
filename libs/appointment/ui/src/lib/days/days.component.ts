@@ -1,7 +1,23 @@
 import { JsonPipe, NgClass, NgForOf } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  Pipe,
+  PipeTransform,
+} from '@angular/core';
 
-const now = () => new Date().getDate();
+@Pipe({
+  name: 'today',
+  standalone: true,
+})
+export class TodayPipe implements PipeTransform {
+  transform(date: Date): boolean {
+    const d = new Date();
+
+    return date.getDate() === d.getDate();
+  }
+}
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -9,11 +25,11 @@ const now = () => new Date().getDate();
   standalone: true,
   styleUrls: ['./days.component.scss'],
   templateUrl: './days.component.html',
-  imports: [NgForOf, JsonPipe, NgClass],
+  imports: [NgForOf, JsonPipe, NgClass, TodayPipe],
 })
 export class DaysComponent {
   dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  now = now();
+  time = new Date().getTime();
 
-  @Input() workingDays?: { day: number; date: number }[];
+  @Input() workingDays?: Date[];
 }
