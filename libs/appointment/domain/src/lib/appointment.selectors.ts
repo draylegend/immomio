@@ -14,6 +14,11 @@ export const selectWorkingDays = createSelector(selectFeature, s =>
   s.workingDays.map(day => ({ day, date: s.selectedWeek + day })),
 );
 
+export const selectWorkingHours = createSelector(
+  selectFeature,
+  s => s.workingHours,
+);
+
 export const selectViewings = createSelector(selectFeature, s => {
   const res: Viewings = {};
 

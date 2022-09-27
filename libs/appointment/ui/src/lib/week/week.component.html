@@ -14,9 +14,10 @@
 
 <im-days [workingDays]="days"></im-days>
 
-<im-time></im-time>
+<im-time [workingHours]="workingHours"></im-time>
 
 <im-week-content
   (showAppointment)="showAppointment.emit($event)"
+  [startWorkingHour]="workingHours?.[0]"
   [viewings]="viewings"
 ></im-week-content>

@@ -9,6 +9,7 @@ import * as selectors from './appointment.selectors';
 export class AppointmentFacade {
   loading$ = this.store.select(feature.selectLoading);
   workingDays$ = this.store.select(selectors.selectWorkingDays);
+  workingHours$ = this.store.select(selectors.selectWorkingHours);
   viewings$ = this.store.select(selectors.selectViewings);
   weekSpan$ = this.store.select(selectors.selectWeekSpan);
   selectedViewings$ = this.store.select(selectors.selectSelectedViewings);

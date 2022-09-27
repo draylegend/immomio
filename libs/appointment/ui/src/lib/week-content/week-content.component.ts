@@ -14,7 +14,7 @@ import { ViewingsComponent } from '../viewings/viewings.component';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'im-week-content[viewings]',
+  selector: 'im-week-content[viewings][startWorkingHour]',
   standalone: true,
   styleUrls: ['./week-content.component.scss'],
   templateUrl: './week-content.component.html',
@@ -29,17 +29,21 @@ import { ViewingsComponent } from '../viewings/viewings.component';
 export class WeekContentComponent {
   @Input() viewings?: Viewings;
 
+  /** Format: h:m */
+  @Input() startWorkingHour?: string;
+
   @Output() showAppointment = new EventEmitter<string[]>();
 
   pointer$ = timer(0, 1000).pipe(
     map(() => {
       const d = new Date();
+      const [h] = this.startWorkingHour?.split(':') || [];
+      const startHour = d.getHours() - Number(h);
+      const mins = `0${d.getMinutes()}`.slice(-2);
 
       return {
-        time: `${d.getHours()}:${
-          d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes()
-        }`,
-        y: ((d.getHours() * 60 + d.getMinutes()) * 100) / 60,
+        time: `${d.getHours()}:${mins}`,
+        y: ((startHour * 60 + d.getMinutes()) * 100) / 60,
       };
     }),
   );

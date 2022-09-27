@@ -7,15 +7,28 @@ import { appointmentActions, weekActions } from './appointment.actions';
 import { APPOINTMENT_KEY, State } from './appointment.models';
 import { adapter } from './appointment.selectors';
 
-const d = getFirstWeekDay();
-
 export const initialState: State = adapter.getInitialState({
   error: '',
   loading: false,
   selectedWeek: getCurrentWeekNumber(),
-  selectedYear: d.getFullYear(),
+  selectedYear: getFirstWeekDay().getFullYear(),
   selectedViewings: [],
   workingDays: [0, 1, 2, 3, 4, 5, 6],
+  workingHours: [
+    '8:00',
+    '9:00',
+    '10:00',
+    '11:00',
+    '12:00',
+    '13:00',
+    '14:00',
+    '15:00',
+    '16:00',
+    '17:00',
+    '18:00',
+    '19:00',
+    '20:00',
+  ],
 });
 
 export const feature = createFeature({
