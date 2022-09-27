@@ -1,23 +1,6 @@
 import { JsonPipe, NgClass, NgForOf } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Input,
-  Pipe,
-  PipeTransform,
-} from '@angular/core';
-
-@Pipe({
-  name: 'today',
-  standalone: true,
-})
-export class TodayPipe implements PipeTransform {
-  transform(date: Date): boolean {
-    const d = new Date();
-
-    return date.getDate() === d.getDate();
-  }
-}
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { TodayPipe } from '@immomio/shared/ui';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
