@@ -1,1 +1,5 @@
-<mat-calendar [(selected)]="selected"></mat-calendar>
+<mat-calendar
+  (selectedChange)="dateChanges.emit($event)"
+  [selected]="selected"
+  [startAt]="selected"
+></mat-calendar>

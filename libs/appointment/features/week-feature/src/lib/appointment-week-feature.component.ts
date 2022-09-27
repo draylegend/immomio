@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AppointmentFacade } from '@immomio/appointment/domain';
 import {

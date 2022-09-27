@@ -13,6 +13,7 @@ export class AppointmentFacade {
   viewings$ = this.store.select(selectors.selectViewings);
   weekSpan$ = this.store.select(selectors.selectWeekSpan);
   selectedViewings$ = this.store.select(selectors.selectSelectedViewings);
+  selectedDate$ = this.store.select(selectors.selectSelectedDate);
   history: string[] = [];
 
   constructor(private store: Store<State>) {}
@@ -21,8 +22,8 @@ export class AppointmentFacade {
     this.store.dispatch(appointmentActions.load());
   }
 
-  today(): void {
-    this.store.dispatch(weekActions.today());
+  setWeekYear(date = new Date()): void {
+    this.store.dispatch(weekActions.setweekyear({ date: date.toString() }));
   }
 
   prevWeek(): void {

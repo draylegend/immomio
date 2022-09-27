@@ -18,5 +18,6 @@ export const weekActions = createActionGroup({
     today: emptyProps(),
     prev: emptyProps(),
     next: emptyProps(),
+    setWeekYear: props<{ date: string }>(),
   },
 });

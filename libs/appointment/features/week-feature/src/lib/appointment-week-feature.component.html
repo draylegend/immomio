@@ -1,6 +1,9 @@
 <im-filter></im-filter>
 
-<im-calendar></im-calendar>
+<im-calendar
+  (dateChanges)="facade.setWeekYear($event)"
+  [selected]="facade.selectedDate$ | ngrxPush"
+></im-calendar>
 
 <im-next-viewing></im-next-viewing>
 
@@ -8,7 +11,7 @@
   (next)="facade.nextWeek()"
   (prev)="facade.prevWeek()"
   (showAppointment)="facade.showAppointment($event)"
-  (today)="facade.today()"
+  (today)="facade.setWeekYear()"
   [viewings]="facade.viewings$ | ngrxPush"
   [weekSpan]="facade.weekSpan$ | ngrxPush"
   [workingDays]="facade.workingDays$ | ngrxPush"
